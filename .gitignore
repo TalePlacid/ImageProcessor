@@ -1,0 +1,29 @@
+# 화이트리스트 정책
+*
+
+# 디렉토리 검색 허용
+!*/
+
+# 화이트리스트 파일 포함.
+!.gitignore
+
+# README 파일
+!/README.md
+
+# C/C++ 소스 파일
+!ImageProcessor/*.h
+!ImageProcessor/*.cpp
+
+# Visual Studio 솔루션/프로젝트 관련 파일
+!*.sln
+!ImageProcessor/*.vcxproj
+!ImageProcessor/*.vcxproj.filters
+
+# 리소스 파일
+!Resource/**
+
+# README 예제 출력 파일
+!output/**
+
+# 실행파일
+!x64/Release/*.exe
