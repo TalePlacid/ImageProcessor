@@ -15,6 +15,7 @@
 #include "ImageBuffer.h"
 #include "Exceptions.h"
 
+#include <windows.h> // SetConsoleOutputCP
 #include <iostream>
 #include <memory> // unique_pointer
 #include <chrono>
@@ -25,6 +26,7 @@
 #include "Logger.h"
 
 int main(int argc, char* argv[]) {
+    SetConsoleOutputCP(CP_UTF8);  //콘솔 출력 인코딩을 UTF-8으로 변환
     try {
         // ── CLI 인자 파싱 (제공된 코드) ─────────────────────────
         const ip::ProgramOptions options = ip::CommandLineParser::parse(argc, argv);
