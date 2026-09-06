@@ -28,7 +28,7 @@
 
 ## 기본 사용법
 
-모든 명령은 저장소 루트에서 실행하며, 실행 파일은 `x64/Release`에 있습니다.
+**모든 명령은 저장소 루트에서 실행하며, 실행 파일은 `x64/Release`에 있습니다.**
 
 ```powershell
 .\x64\Release\ImageProcessor.exe --input <입력 BMP> --output <출력 BMP> (--filter <필터> | --pipeline <필터 목록>) [--thread <개수>] [--log <로그 경로>]
@@ -150,3 +150,9 @@ RGB·밝기별 원시 히스토그램 표와 공통 축척을 적용한 분포 �
 ```powershell
 .\x64\Release\ImageProcessor.exe --input .\Resource\1_astronaut.bmp --output .\output\astronaut_logged.bmp --filter grayscale --log .\output\processing.log
 ```
+
+## 가상 환경 테스트
+
+- 테스트 환경: Oracle VirtualBox, Windows 11
+- 발생 오류: `VCRUNTIME140_1.dll`, `MSVCP140.dll`, `VCRUNTIME140.dll` 누락
+- 해결 방법: [Microsoft Visual C++ 재배포 가능 패키지(x64)](https://aka.ms/vc14/vc_redist.x64.exe) 설치
